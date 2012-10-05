@@ -151,56 +151,7 @@ sbutton.addEventListener('click', function () {
                 idate: e.rowData.idate,
                 id: e.rowData.id
             });
-		 var image = Titanium.UI.createImageView({
-                    image: tweets.profile_image_url,
-                    top: 5,
-                    left: 5,
-                    height: 150,
-                    width: 150
-                });
-                var nameLabel = Ti.UI.createLabel({
-                    text: tweets.from_user,
-                    font: {
-                        fontSize: '12dp',
-                        fontWeight: 'bold'
 
-                    },
-                    height: 'auto',
-                    left: 70,
-                    top: 0,
-                    color: '#f00',
-                    touchEnabled: false
-                });
-
-                var textLabel = Ti.UI.createLabel({
-                    text: tweets.text,
-                    font: {
-                        fontSize: '8dp'
-                    },
-                    height: 'auto',
-                    left: 80,
-                    top: '15dp',
-                    color: '#00f',
-                    touchEnabled: false
-                });
-
-               var nickLabel = Ti.UI.createLabel({
-                    text: '"' + tweets.created_at + '"',
-                    font: {
-                        fontSize: '8dp',
-                        textAlign: 'right'
-                    },
-                    height: 'auto',
-                    right: 0,
-                    bottom: '2dp',
-                    color: '#999',
-                    touchEnabled: false
-                });
-		win1.add(image);
-		win1.add(nameLabel);
-		win1.add(textLabel);
-		win1.add(nickLabel);
-		// you may create your own design or forward the data to another window.
             win1.open();
         }
 
